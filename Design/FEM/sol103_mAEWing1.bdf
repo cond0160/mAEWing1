@@ -1,0 +1,70 @@
+$ mAEWing1 FEM history - Virginia Tech
+$ -- FEB, 27
+$ V1:   Mimic mAEWing1 CAD model for mAEWing1 finite element model, all data are from spar build and test report and CAD model
+$		Increase GJ for the spar to take into account of the foam torsional stiffness;
+$       Assume point mass distribution and values in the fuselage based on BFF report (www.paaw.net) and paper (AIAA 2015-0903)
+$       Assume stiffness value for stiffened spar to match modal frequencies with BFF's
+$       
+SOL 103
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 20-Feb-15 at 15:37:03
+ECHO = SORT
+$ Using Nastran default values for RESVEC
+SUBCASE 1
+$ Subcase name : Default
+   SUBTITLE=Default
+   METHOD = 101
+  $ SPC = 99
+   VECTOR(SORT1,REAL)=ALL
+   SPCFORCES(SORT1,REAL)=ALL
+ $  DISP(PUNCH)=ALL
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+PARAM    POST    0
+PARAM   PRTMAXIM YES
+$ GROUND POINT FOR WEIGHT GENERATION
+PARAM,GRDPNT,18888
+$ PRE_PROPVERT WEIGHT TO MASS (1/386)  
+PARAM     WTMASS .002591
+$ PRE_PROPVERT FROM IN/SEC TO KNOTS
+PARAM       VREF  20.254
+EIGRL    100                     20      0
+EIGR     101    MGIV                            20
+         MASS
+$1------$2------$3------$4------$5------$6------$7------$8------$9------$0                             
+$
+INCLUDE GRID_mAEWing1.dat
+$
+INCLUDE BEAM_mAEWing1.dat
+$
+INCLUDE MAT1_mAEWing1.dat
+$
+INCLUDE CONM2_mAEWing1.dat
+$
+INCLUDE RBE2_mAEWing1.dat
+$
+$ INCLUDE SimpleBEAM_mAEWing1.dat
+$
+$ Fictitious support at the CG for decoupled rigid modes 
+SUPORT,18888,123456
+$
+$1------$2------$3------$4------$5------$6------$7------$8------$9------$0
+$SPC1    99      345     1001    3001    THRU    3006 
+$
+$ Referenced Coordinate Frames for control surfaces and body flaps
+$1------$2------$3------$4------$5------$6------$7------$8------$9------$0
+$ --- Left body flap ---
+CORD2R  101             13.64   -1.16   0.0     13.64    -1.16  1.0
+        17.34   -2.75   0.0   
+$ --- Left C.S.  ---
+CORD2R  102             9.753   -16.016 0.0     9.753   -16.016 1.0
+        12.34   -14.97  1.0 
+$ --- Right body flap ---
+CORD2R  201             13.64    1.16   0.0     13.64    1.16   1.0
+        17.34   2.75    0.0
+$ --- Right C.S.  ---
+CORD2R  202             9.753    16.016 0.0     9.753    16.016 1.0
+        12.34    14.97  1.0		
+ENDDATA 6741254d
+$

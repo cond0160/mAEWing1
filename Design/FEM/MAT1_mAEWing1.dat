@@ -1,0 +1,19 @@
+$ Description of Material : Date: 20-Feb-15           Time: 15:30:09
+$ ----------------------------- Birch--------------------------------
+$1------$1------$1------$1------$1------$1------$1------$1------
+MAT1     901    2.01e+6         .25     2.488e-2
+$
+$
+$ ------------------------------XPS----------------------------------------
+$ Description of Material : Date: 20-Feb-15           Time: 15:30:09
+$1------$1------$1------$1------$1------$1------$1------
+MAT1     902    3.6e+4          .30     .0015
+$
+$
+$ ---------Carbon sandwich panel, effective material property values------
+$ Description of Material : Date: 20-Feb-15           Time: 15:30:09
+$1------$1------$1------$1------$1------$1------$1------
+$ 0.045223 lb/in^3 is obtained from AIAA 2015-0903 optimized value
+MAT1     903    6.660e+61.252e+6        .045223
+$ density is from prediction
+$MAT1     903    6.660e+61.252e+6        .052565

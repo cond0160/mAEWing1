@@ -1,0 +1,39 @@
+$# Creating journal file V:\Wei 
+$# Zhao\PAAW\Model\FEM\mAEWing1\mAEWing1_FEM_V1\mAEWing1_v1.db.jou at 
+$# 02-Apr-15 21:20:50
+uil_file_rebuild.start("C:\MSC.Software\Patran_x64\20122/template.db", @
+"V:\Wei Zhao\PAAW\Model\FEM\mAEWing1\mAEWing1_FEM_V1\mAEWing1_v1.db")
+$# Synchronizing the User Data Manager
+set_current_dir( "V:\Wei Zhao\PAAW\Model\FEM\mAEWing1\mAEWing1_FEM_V1" )
+$# The current working directory has been changed to the database location 
+$# shown.                                                                     
+$#                                                                            
+$#                                   
+nastran_input_import( "V:\Wei Zhao\PAAW\Model\FEM\mAEWing1\mAEWing1_FEM_V1" // @
+"\sol103_mAEWing1.bdf", "default_group", 11, [TRUE, TRUE, TRUE, TRUE, TRUE,  @
+TRUE, TRUE, TRUE, FALSE, TRUE, TRUE], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0,  @
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [-2000000000, -2000000000, -2000000000,  @
+-2000000000, -2000000000, -2000000000, -2000000000, -2000000000, 0, 0, 0] )
+$# Loading dynamic library C:\MSC.Software\Patran_x64\20122\bin\exe\nifimp.dll
+$# Parsing input file...
+$# Importing data...
+$# 4 Coordinate Frames written to database.
+$# 87 Nodes written to database.
+$# 3 Materials written to database.
+$# 73 Elements written to database.
+$# 18 Property Sets written to database.
+$# 39 MPCs written to database.
+$# 7 Executive Control lines/comments written to database.
+$# 5 Case Control lines/comments written to database.
+$# 253 unrecognized Bulk Data lines/comments written to database.
+$# 265 total unrecognized entities/comment lines written to database.
+$# 1 Load Cases written to database.
+$# Reading of MSC.Nastran input file completed.
+ga_view_aa_set( -62.989628, -17.934326, -34.842709 )
+ga_view_aa_set( -67., 0., -34. )
+gu_fit_view(  )
+ga_view_aa_set( -6.603489, 5.514040, -23.767658 )
+ga_view_aa_set( -67., 0., -34. )
+ga_view_zoom_set( 33.811562 )
+$# Flushing the User Data Manager
+$# Journal file stopped recording at 02-Apr-15 21:31:03

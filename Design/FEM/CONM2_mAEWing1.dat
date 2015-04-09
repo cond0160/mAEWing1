@@ -1,0 +1,56 @@
+$ FEM history - Virginia Tech
+$ ------- FEB, 27
+$  point masses in the fuselage are subjected to update based on GVT data
+$ ----------- Lumped mass CONM2 for mAEWing1 FEM--------
+$  CONM2 100001 200001 are lumped mass for servos for body flaps
+$  CONM2 101, 102, 103, 201, 202, 203 are lumped mass for servos of control surfaces
+$  CONM2 104, 204 are lumped mass for winglets
+$  CONM2 105, 205 are lumped mass for winglet attaches
+$  CONM2 301, 302, 303 are lumped mass for flight computer, battery, and engine motor.
+$  CONM2 401-404, 501-504 are lumped mass for body flaps and control surfaces
+$  CONM2 10001 20001 are lumped masses for B.F.
+$  CONM2 10002-10004, 20002-20004 are lumped masses for C.S.
+$
+$ --------------conm2 for servos at left wing --------------
+$CONM2  EID       G      CID       M    X1       X2      X3
+$       I11       I21    I22      I31    I32     I33	
+CONM2   100     100001          0.02205 0.0     0.0     0.0   
+CONM2   101     1030            0.02205 0.0     0.0     0.0 
+CONM2   102     1050            0.02205 0.0     0.0     0.0
+CONM2   103     1070            0.02205 0.0     0.0     0.0  
+$ 
+$ CONM2 for winglet at the left wing
+$1------$1------$1------$1------$1------$1------$1------$1---
+CONM2   104     1090            .11023  2.7     0.0     0.0  
+CONM2   105     1090            .05309  1.3     0.0     0.0  
+$
+$ --------------conm2 for servos at right wing ------------
+CONM2   200     200001          0.02205 0.0     0.0     0.0   
+CONM2   201     2030            0.02205 0.0     0.0     0.0  
+CONM2   202     2050            0.02205 0.0     0.0     0.0  
+CONM2   203     2070            0.02205 0.0     0.0     0.0  
+$ 
+$ CONM2 for winglet at the right wing and winglet attach
+CONM2   204     2090            .11023  2.7     0.0     0.0  
+CONM2   205     2090            .05309  1.3     0.0     0.0  
+$
+$----------------------fuselage CONM2------------------------
+CONM2   301     3002            0.513   0.0     0.0     0.0
+CONM2   302     3004            0.50    0.0     0.0     0.0
+CONM2   303     3006            0.441   0.0     0.0     0.0
+$
+$ --------------------CONM2 for C.S and B.F in left wing ----
+$1------$1------$1------$1------$1------$1------$1------$1---
+CONM2   401     10001   101     0.1260  0.0     0.0     0.0   
+CONM2   402     10002   102     0.1260  0.0     0.0     0.0  
+CONM2   403     10003   102     0.1260  0.0     0.0     0.0
+CONM2   404     10004   102     0.1260  0.0     0.0     0.0  
+$ --------------------CONM2 for C.S and B.F in right wing ---
+$1------$1------$1------$1------$1------$1------$1------$1---
+CONM2   501     20001   201     0.1260  0.0     0.0     0.0   
+CONM2   502     20002   202     0.1260  0.0     0.0     0.0
+CONM2   503     20003   202     0.1260  0.0     0.0     0.0
+CONM2   504     20004   202     0.1260  0.0     0.0     0.0   
+$
+CONM2   10088   10088           0.0020  0.0     0.0     0.0   
+
