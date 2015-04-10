@@ -51,6 +51,17 @@ double doublet121(double t0,	///< [sec], start time
 		double dur3,			///< [sec], duration of third pulse
 		double amplitude		///< [rad], magnitude of pulse
 		);
+		
+/// Auxiliary function that returns a 3-2-1-1 doublet signal
+/*!
+ *	\sa doublet()
+ *	\ingroup systemid_fcns
+*/
+double doublet3211(double t0,	///< [sec], start time
+		double currentTime,		///< [sec], current time
+		double dur1,			///< [sec], duration of 1 pulse
+		double amplitude		///< [rad], magnitude of pulse
+		);
 
 /// Auxiliary function that adds a orthogonal multi-sine to one surface
 /*!
